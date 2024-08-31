@@ -53,9 +53,7 @@ class _AuthPageContentState extends State<AuthPageContent>
           child: TabBarView(
             controller: _tabController,
             children: <Widget>[
-              LogInForm(
-                onSubmit: () {},
-              ),
+              LogInForm(onSubmit: () {}),
               const SignInFormWidget(),
             ],
           ),
