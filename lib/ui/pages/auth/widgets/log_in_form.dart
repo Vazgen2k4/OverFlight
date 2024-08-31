@@ -1,10 +1,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:over_flight/resources/resources.dart';
 import 'package:over_flight/ui/widgets/buttons/filled_button_widget.dart';
+import 'package:over_flight/ui/widgets/buttons/google_button.dart';
 import 'package:over_flight/ui/widgets/text_fields/input_form_widget.dart';
+import 'package:over_flight/ui/widgets/title_section_widget.dart';
 
 class LogInForm extends StatefulWidget {
   final VoidCallback onSubmit;
@@ -28,8 +28,6 @@ class _LogInFormState extends State<LogInForm> {
   @override
   Widget build(BuildContext context) {
     const divider = SizedBox(height: 28);
-    final theme = Theme.of(context);
-    final textStyle = theme.textTheme;
 
     return CustomScrollView(
       slivers: [
@@ -41,19 +39,9 @@ class _LogInFormState extends State<LogInForm> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ListTile(
-                    contentPadding: EdgeInsets.zero,
-                    title: Text(
-                      'Log in to your account',
-                      style: textStyle.titleLarge,
-                    ),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.only(top: 12),
-                      child: Text(
-                        'Hello, Welcome back!',
-                        style: textStyle.titleMedium,
-                      ),
-                    ),
+                  const TitleSectionWidget(
+                    title: 'Log in to your account',
+                    subtitle: 'Hello, Welcome back!',
                   ),
                   divider,
                   InputFormWidget(
@@ -87,27 +75,7 @@ class _LogInFormState extends State<LogInForm> {
                     label: "Войти",
                   ),
                   const SizedBox(height: 20),
-                  SizedBox(
-                    width: double.infinity,
-                    child: TextButton.icon(
-                      onPressed: _forgotPass,
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 17),
-                        alignment: Alignment.center,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                          side: const BorderSide(
-                            color: Color(0xffEAEFF3),
-                          ),
-                        ),
-                      ),
-                      icon: SvgPicture.asset(AppIcons.google),
-                      label: Text(
-                        'Sign Up with Google',
-                        style: textStyle.titleMedium,
-                      ),
-                    ),
-                  ),
+                  const GoogleButton(),
                 ],
               ),
             ),
