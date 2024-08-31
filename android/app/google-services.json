@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "184094844137",
+    "project_id": "over-flight",
+    "storage_bucket": "over-flight.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184094844137:android:b93fe737ca8d295935fc78",
+        "android_client_info": {
+          "package_name": "com.example.over_flight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbMhsKqN5kq90cI4XUjV457iO8sd8zg4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
