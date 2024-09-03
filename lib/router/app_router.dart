@@ -42,9 +42,23 @@ class AppRouter {
     builder: (_) => const Error404Page(),
   );
 
-  
-  static Future<T?> go<T>(BuildContext context, String route, {Object? arguments}) {
+  static Future<T?> go<T>(
+    BuildContext context,
+    String route, {
+    Object? arguments,
+  }) {
     return Navigator.of(context).pushNamed(route, arguments: arguments);
   }
 
+  static Future<T?> goWithRemove<T>(
+    BuildContext context,
+    String route, {
+    Object? arguments,
+  }) {
+    return Navigator.of(context).pushNamedAndRemoveUntil(
+      route,
+      (_) => false,
+      arguments: arguments,
+    );
+  }
 }

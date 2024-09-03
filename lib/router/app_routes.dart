@@ -17,6 +17,7 @@ abstract final class AppRoutes {
       AppRoute(page: StartPage(), path: start),
       AppRoute(page: AuthPage(), path: auth),
       AppRoute(page: PhoneVerification(), path: phoneVerification),
+      AppRoute(page: HomePage(), path: home),
     ];
 
     return routesList.toSet().toList();

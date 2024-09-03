@@ -17,4 +17,13 @@ sealed class AppTextStyles {
     color: AppColors.title,
     height: 22 / 16,
   );
+  
+  static const hedlineLarge = TextStyle(
+    fontWeight: FontWeight.bold,
+    fontSize: 28,
+    color: AppColors.title,
+    height: 38 / 28,
+  );
+  
+  
 }

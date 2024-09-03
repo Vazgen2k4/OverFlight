@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:over_flight/router/router.dart';
 import 'package:over_flight/ui/widgets/buttons/filled_button_widget.dart';
 import 'package:over_flight/ui/widgets/buttons/google_button.dart';
 import 'package:over_flight/ui/widgets/text_fields/input_form_widget.dart';
@@ -86,6 +87,12 @@ class _LogInFormState extends State<LogInForm> {
   }
 
   void _onSubmit() {
+    // TODO: Заглушка
+    AppRouter.goWithRemove(context, AppRoutes.home);
+
+    return;
+
+    // TODO: логику поменять
     final formState = _formKey.currentState;
 
     if (formState == null) {

@@ -7,6 +7,9 @@ void main() {
   test('app_icons assets test', () {
     expect(File(AppIcons.flyght).existsSync(), isTrue);
     expect(File(AppIcons.google).existsSync(), isTrue);
+    expect(File(AppIcons.menu).existsSync(), isTrue);
     expect(File(AppIcons.spashScreen).existsSync(), isTrue);
+    expect(File(AppIcons.star).existsSync(), isTrue);
+    expect(File(AppIcons.textFieldOptions).existsSync(), isTrue);
   });
 }
